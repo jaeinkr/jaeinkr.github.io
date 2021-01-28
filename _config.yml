@@ -3,3 +3,6 @@ author: Jaein Kim
 description: NLP and others
 url: "https://jaeinkr.github.io"
 auto: true
+theme: jekyll-theme-minimal
+plugins:
+- jekyll-seo-tag
