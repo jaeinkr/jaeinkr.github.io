@@ -1,4 +1,5 @@
-theme: jekyll-theme-minimal
 title: Jaein Land
+author: Jaein Kim
 description: NLP and others
 
+auto: true
