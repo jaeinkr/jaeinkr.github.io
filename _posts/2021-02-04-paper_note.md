@@ -1,5 +1,8 @@
 ---
 layout: default
+title : Attention Is All You Need_Notes
+categories: [Paper Notes]
+tags: [NLP, Research, ML]
 ---
 <p>{{ page.date || date_to_long_string }} </p>
 ## Attention Is All You Need_Notes
