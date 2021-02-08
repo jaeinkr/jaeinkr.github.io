@@ -256,7 +256,11 @@ h1 {
   font-size: 28px; }
 
 h2 {
+  font-size: 18px;
   color: #393939; }
+
+h3 {
+  font-size: 15px; }
 
 h3, h4, h5, h6 {
   color: #494949; }
@@ -279,7 +283,7 @@ a:hover small {
   color: #777; }
 
 .wrapper {
-  width: 860px;
+  width: 950px;
   margin: 0 auto; }
 
 blockquote {
@@ -375,7 +379,7 @@ header ul a strong {
   color: #222; }
 
 section {
-  width: 500px;
+  width: 700px;
   float: right;
   padding-bottom: 50px; }
 
