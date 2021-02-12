@@ -1,12 +1,12 @@
 ---
 layout: default
-title : "나는 샤넬백 대신 그림을 산다 _서평"
+title : "[Book Review] 나는 샤넬백 대신 그림을 산다"
 categories: [Book Review]
 tags: [Economy, Book Review, Investing]
 comments: true
 ---
 <p>{{ page.date || date_to_long_string }} </p>
-## 나는 샤넬백 대신 그림을 산다 _서평
+## [Book Review] 나는 샤넬백 대신 그림을 산다
 <center><img src="/assets/img/210212_1.jpeg" width="60%" height="60%"></center>
 *나에게 '아트'란 멀고도 가까운 존재인데, 
 멀었던 것은 내가 평소에 그림과는 접점이 거의 없기 때문이고, 가까운 것은 아빠가 미술을 했던 사람이어서, 어릴 때 많은 그림을 봤고, 많이 그렸었고, 많은 그림 역사 이야기를 들었기 때문이다. 
