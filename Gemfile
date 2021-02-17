@@ -7,6 +7,7 @@ gem 'jekyll'
 gem "minima"
 gem 'jekyll-seo-tag'
 gem 'jekyll-theme-minimal'
+gem 'jemoji'
 
 
 git_source(:github) {|repo_name| "https://github.com/#{jaeinkr.github.io}" }

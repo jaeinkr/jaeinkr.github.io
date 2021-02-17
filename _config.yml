@@ -6,6 +6,7 @@ auto: true
 theme: jekyll-theme-minimal
 plugins:
 - jekyll-seo-tag
+- jemoji
 
 # Conversion
 markdown: kramdown
