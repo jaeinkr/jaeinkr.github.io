@@ -1,6 +1,6 @@
 ---
 layout: default
-title : "[Paper Note] SimplE Embedding for Link Prediction in Knowledge Graphs (2018)" 
+title : "SimplE Embedding for Link Prediction in Knowledge Graphs (2018)" 
 categories: [Paper Notes]
 tags: [NLP, Research, Link Prediction]
 use_math: true

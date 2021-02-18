@@ -1,6 +1,6 @@
 ---
 layout: default
-title : "[Paper Note] Complex Embeddings for Simple Link Prediction (2016)" 
+title : "Complex Embeddings for Simple Link Prediction (2016)" 
 categories: [Paper Notes]
 tags: [NLP, Research, Link Prediction]
 use_math: true

@@ -1,6 +1,6 @@
 ---
 layout: default
-title : "[Book Review] 나는 샤넬백 대신 그림을 산다"
+title : "나는 샤넬백 대신 그림을 산다"
 categories: [Book Review]
 tags: [Economy, Book Review, Investing]
 comments: true
