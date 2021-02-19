@@ -4,6 +4,7 @@ title : "Complex Embeddings for Simple Link Prediction (2016)"
 categories: [Paper Notes]
 tags: [NLP, Research, Link Prediction]
 use_math: true
+published: false
 ---
 <p>{{ page.date || date_to_long_string }} </p>
 ## [Paper Note] [Complex Embeddings for Simple Link Prediction](http://proceedings.mlr.press/v48/trouillon16.pdf) (2016)
