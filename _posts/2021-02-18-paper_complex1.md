@@ -4,7 +4,6 @@ title : "Complex Embeddings for Simple Link Prediction (2016) (1)"
 categories: [Paper Notes]
 tags: [NLP, Research, Link Prediction]
 use_math: true
-published: false
 ---
 #### Theo Trouillon, Johannes Welbl, Sebastian Riedel, Eric Gaussier, Guillaume Bouchard
 >Keywords: NLP, Link Prediction, Embedding Model, Complex Embedding
