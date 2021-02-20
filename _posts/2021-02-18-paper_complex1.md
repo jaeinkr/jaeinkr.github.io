@@ -48,3 +48,9 @@ The first is merging their approaches to known tensor factorization in order to 
 might lead to the works involve non-compositionality.
 Another one is to develop negative sampling procedure to generate informative nagative samples.
 
+
+## Paper Structure
+---
+1. **Discription of intuition of using complex embeddings**: As demonstration, author applied complex embeddings in the square matrix case in which there is only a single relation between entities.
+2. **Applying complex embeddings to the case of multiple relations**: Extended the formulation to a 3-dimension matrix.
+3. **Experiments on large scale KBs**: Experiments on large-scale benchmark KBs demonstrated the approach is not only simple and fast, but also showed improvement on accuracy over SOTA models.
