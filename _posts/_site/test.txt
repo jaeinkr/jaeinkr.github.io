@@ -1,0 +1,40 @@
+<!--
+Binary relations in KBs exhibit various types of patterns: hierarchies and compositions like FatherOf, OlderThan or IsPartOf—with partial/total, strict/non-strict orders—and equivalence relations like IsSimilarTo.
+-->
+[200~<!--
+using complex embeddings in the square matrix case in which there is only a single relation between entities.
+extend to a stacked set of square matrices in a third-order tensor of **represent multiple relations.**
+
+this representation leads not only to simpler and faster algorithms, but also gives a systematic accuracy improvement over SOTA alternatives.
+
+Since this involves the _conjugate-transpose_ of one of the two vectors, the dot product becomes _antisymmetric_.
+Antisymmetric relations can receive different scores depending on the ordering. of the entities involved.
+-->
+
+<!--
+在本节中，我们讨论将复杂的嵌入用于低秩矩阵分解，并通过考虑仅具有单个关系类型的简化链接预测任务来说明这一点。
+그러니까, simplified link prediction (a single relation type)을 예로 이용해서 complex embeddings이 low-rank matrix factorization에 쓰일 때의 유용함을 알리겠다는 뜻.
+* matrix factorization: decomposing the user-item interaction matrix into the product of two lower dimensionality rectangular matrices. (usually used in recommendation system)
+* Understanding the factorization in complex space leads to a better theoretical understanding of the class of matrices that can actually be approximated by dot products of embeddings.
+了解复杂空间中的因式分解可以更好地从理论上理解矩阵的类别，而实际上可以通过嵌入的点积来近似。
+*normal matrix: A*A = AA* (在非交换条件下尽可能保持交换性。)
+These(The dot products?) are the so-called normal matrices for which the left and right embeddings share the same unitary basis.
+*eigenvalue 설명: https://darkpgmr.tistory.com/105
+*example of conjugate matrix calculation: https://keisan.casio.com/exec/system/15052019699070
+-->
+
+<!--
+## Theory
+---
+**Eigenvalue decomposition**
+* Not necessarily positive or real
+* The factorization (5) is useful as the rows of $E$ can be used as vectorial representations of
+the entities corresponding to rows and columns of the relation matrix $\textbf{X}$.
+Indeed, for a given entity, its subject embedding vector is the complex conjugate of its object embedding vector.
+
+**Conclusion**
+- Encompasses all possible binary relations
+- Accurately describes both symmetric and antisymmetric relations.
+- Learnable relations can be efficiently approximated by a simple low-rank factorization, using complex numbers to represent the latent factors.
+-->
+

@@ -1,6 +1,6 @@
 ---
 layout: post
-title : "Social media and uncivil politicsi: "
+title : "Social media and uncivil politics"
 categories: [Essay]
 tags: [Essay, Social Media, Political Communication]
 published: false

@@ -1,0 +1,54 @@
+<h4 id="theo-trouillon-johannes-welbl-sebastian-riedel-eric-gaussier-guillaume-bouchard">Theo Trouillon, Johannes Welbl, Sebastian Riedel, Eric Gaussier, Guillaume Bouchard</h4>
+<blockquote>
+  <p>Keywords: NLP, Link Prediction, Embedding Model, Complex Embedding</p>
+</blockquote>
+
+<p><a href="https://arxiv.org/pdf/1606.06357.pdf">paper link</a></p>
+
+<p><em>Statement: I recently started posting paper reviews in my blog for my research on NLP. 
+However, I am not yet a professional researcher as well as English is not my native language so that my posts might have some incorrect descriptions.
+I hope whoever reading my post understand my situation and I will be very grateful if you correct any wrong information. &lt;3
+The comment section will be added to my blog very soon!!</em></p>
+
+<p><em>In this post, I only describe general concepts of this paper. Detailed theoretical contents will be introduced in the next post.</em></p>
+
+<h2 id="motivation-and-general-idea">Motivation and General Idea</h2>
+<hr />
+
+<p>In link prediction, many relations are non-deterministic. 
+For example, the combination of the two facts <em>IsBornIn(John, Athens)</em> and <em>IsLocatedIn(Athens, Greece)</em> 
+does not always imply <em>HasNationality(John, Greece)</em> is true.</p>
+
+<p>To do so, the authors believe it is required to handle them in a probabilistic fashion involving the properties sucn as reflexivity, symmetry and transitivity.
+In the previous works, dealing with <em>anti-symmetric</em> relations always implied an explosion of the number of parameters making models prone to overfitting.
+So that the finding the best ratio between expressiveness and parameter space size is the keystone of embedding models while dealing with anti-symmetric relations:</p>
+<center><img src="/assets/img/210218_1.png" width="80%" height="80%" /></center>
+
+<p>To address this, in this work, <em>complex embeddings</em> are used instead of real-number embeddings, which involves <strong><em>Hermitian</em></strong> dot prodoct. 
+In this way, it is able to take advantages of both of:</p>
+<ul>
+  <li>dot product -&gt; linearity in both space and time complexity</li>
+  <li>complex vectors -&gt; capture antisymmetric relations</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="contributions">Contributions</h2>
+<hr />
+
+<p>The author applied complex values to latent factorization calculations to induce efficient handling of antisymmetric relations.
+Compared with the existing SOTA models, this approach is more “simple” since it uses only the Hermitian dot product.
+Also, since it is linear in space and time, it can be applied to large datasets.</p>
+
+<p>At last, The author gave some suggestions on possible future works. 
+The first is merging their approaches to known tensor factorization in order to improve predictive performance. For example, parewise embeddings and complex numbers being used together 
+might lead to the works involve non-compositionality.
+Another one is to develop negative sampling procedure to generate informative nagative samples.</p>
+
+<h2 id="paper-structure">Paper Structure</h2>
+<hr />
+<ol>
+  <li><strong>Discription of intuition of using complex embeddings</strong>: As demonstration, author applied complex embeddings in the square matrix case in which there is only a single relation between entities.</li>
+  <li><strong>Applying complex embeddings to the case of multiple relations</strong>: Extended the formulation to a 3-dimension matrix.</li>
+  <li><strong>Experiments on large scale KBs</strong>: Experiments on large-scale benchmark KBs demonstrated the approach is not only simple and fast, but also showed improvement on accuracy over SOTA models.</li>
+</ol>
