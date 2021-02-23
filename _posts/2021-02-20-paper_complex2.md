@@ -4,7 +4,7 @@ title : "Complex Embeddings for Simple Link Prediction (2016) (2)"
 categories: [Paper Notes]
 tags: [NLP, Research, Link Prediction]
 use_math: true
-published: false
+published: true
 ---
 #### Theo Trouillon, Johannes Welbl, Sebastian Riedel, Eric Gaussier, Guillaume Bouchard
 >Keywords: NLP, Link Prediction, Embedding Model, Complex Embedding
@@ -19,38 +19,72 @@ The comment section will be added to my blog very soon!!_
 _This post is about the theoretical stuff involved in the paper. 
 If you want to learn about general idea, please read [this](http://jaeinkr.github.io/paper%20notes/2021/02/18/paper_complex1.html)._
 
-
-## Intuition of using complex embeddings
+<br>
+## Intuitions of the modeling
 ---
-So what I wanted to understand is why the complex embeddings are needed. The author applied complex embeddings on a simplified link prediction task with a single relation type to introduce the intuition of using it.
+So what I wanted to understand is: **(1) why the complex embeddings are needed**
+ and **(2) why eigenvalue decomposition rather than SVD**. The author applied complex embeddings on a simplified link prediction task with a single relation type to introduce the intuition of using it.
 
-There are some definitions:
+Let's learn some definitions first:
 - $\varepsilon$ is a set of entities with \|${\varepsilon}$\|=$n$. 
-- A relation between two entities is binary value $Y_{so}\in \{-1, 1\}$, where $s, o\in{\varepsilon}$. 
+- A relation between two entities is binary value $Y_{so}\in \\{-1, 1\\}$, where $s, o\in{\varepsilon}$. --- (1)
 - $s, o$ represents subject and object respectively.
 
-Here, the goal is to find a latent matrix $X\in{\mathbb{R}}^{n\times n}$.
+**The goal is to find a latent matrix $X\in{\mathbb{R}}^{n\times n}$**, which is a score matrix between entities. $Y$ is the partially observed sign matrix.
 There are many existing matrix factorization approaches, such as _SVD_, to approximate $X$.
-However, we have to note that the same entity can appear as both subject and object. 
+However, we have to notice that the same entity can appear as both subject and object. 
 Naturally, joint embeddings of the entities are learnt in most of link prediction research.
 For example, Eigenvalue decomposition is often used to approximate real symmetric matrices such as similarity matrices:
 
-$X = EWE^{-1}$.
+$X = EWE^{-1}$. --- (2)
 
 But how to make it possible to also be antisymmetric? It is not possible in the real space!
-So this is why the complex embeddings are needed in this research.
+This could be why the complex embeddings are used in this research.
 With complex numbers, the dot product is defined as:
 
-$<u,v>:=\bar{u}^T{v}$,
+$<u,v>:=\bar{u}^T{v}$, 
 
 where $u$ and $v$ are complex vectores. Specifically, $u=Re(u)+iIm(u)$ with $Re(u)\in{\mathbb{R}^K}$ and $Im(u)\in{\mathbb{R}^K}$.
-We re-define the matrix $X$ as:
+Also, to avoid the computational issues eigendecomposition, the space of _normal matrices_ is considered. A matrix $X$ is normal if and only if it is unitarily diagonalizable. So that let's re-define the matrix $X$ as:
 
-$X=EW\bar{E}^T$.
+$X=EW\bar{E}^T$,
 
-where $W, E\in{\mathbb{C}^{n\times n}}$ and $E\in{\mathbb{C}^{n\times n}}$.
+where $W$ is the diagonal matrix of eigenvalues, $E$ is a unitary matrix of eigenvectors with $\bar{E}$ representing its complex conjugate($W, E\in{\mathbb{C}^{n\times n}}$). Then, to satisfy equation 1, only the real part of the decompostion is used.
 
+The eigenvalue decomposition brings us two advantages:
+- The eigenvalues are not necessarily positive or real;
+- The rows of $E$ can be used as vectorial representations of the entities corresponding to rows and columns of the relation matrix $X$. 
+For an entity, **its subject embedding vector is the complex conjugate of its object embedding vector**.
+
+<!--
+
+What in complex value is-----eigenvalues
+What is bilinear form???
+
+$E\in{\mathbb{C}^{n\times n}}$.
+-->
 <!--
 Standard matrix factorization approximates $X$ by a matrix product $UV^T$ where $U$, $V$$\in{\mathbb{R}^{n\times K}}$.\
 $\Longrightarrow$ An entity has different embeddings when it appears as a subject or object.
+
+
+
+What anti symmetric does???
 -->
+
+<br>
+## Learnable Model
+---
+In a link prediction task, only partial information is given and we want to find the rest relations to complete the relation matrix.
+What we want to make learnable is the relation score between two entities.
+Assuming the binary relations have low _sign-rank_, individual relation scores $X_{so}$ can be predicted through:
+
+$X_{so} = Re(e_s^{T}W\bar{e}_o)$.
+
+In brief conclusion, the learnable relations can be efficiently approximated by a simple low-rank factorization using complex numbers to represent the latent factors.
+
+<br>
+## Applying to Binary Multi-Relational Data
+---
+In above contents, we were focusing on a single relationship, which you can imagine as one 'slice' of the 3D KG.
+Since we learnt the intuition of this paper with a single 'slice', now let's see the application to the entire 3D KG, the multi-relational data.

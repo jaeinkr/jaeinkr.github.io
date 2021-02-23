@@ -1,0 +1,59 @@
+<h4 id="theo-trouillon-johannes-welbl-sebastian-riedel-eric-gaussier-guillaume-bouchard">Theo Trouillon, Johannes Welbl, Sebastian Riedel, Eric Gaussier, Guillaume Bouchard</h4>
+<blockquote>
+  <p>Keywords: NLP, Link Prediction, Embedding Model, Complex Embedding</p>
+</blockquote>
+
+<p><a href="https://arxiv.org/pdf/1606.06357.pdf">paper link</a></p>
+
+<p><em>Statement: I recently started posting paper reviews in my blog for my research on NLP. 
+However, I am not yet a professional researcher as well as English is not my native language so that my posts might have some incorrect descriptions.
+I hope whoever reading my post understand my situation and I will be very grateful if you correct any wrong information. &lt;3
+The comment section will be added to my blog very soon!!</em></p>
+
+<p><em>This post is about the theoretical stuff involved in the paper. 
+If you want to learn about general idea, please read <a href="http://jaeinkr.github.io/paper%20notes/2021/02/18/paper_complex1.html">this</a>.</em></p>
+
+<h2 id="intuitions-of-the-modeling">Intuitions of the modeling</h2>
+<hr />
+<p>So what I wanted to understand is: (1) why the complex embeddings are needed and (2) why eigenvalue decomposition rather than SVD. The author applied complex embeddings on a simplified link prediction task with a single relation type to introduce the intuition of using it.</p>
+
+<p>There are some definitions to learn:</p>
+<ul>
+  <li>$\varepsilon$ is a set of entities with |${\varepsilon}$|=$n$.</li>
+  <li>A relation between two entities is binary value $Y_{so}\in {-1, 1}$, where $s, o\in{\varepsilon}$. — (1)</li>
+  <li>$s, o$ represents subject and object respectively.</li>
+</ul>
+
+<p>Here, the goal is to find a latent matrix $X\in{\mathbb{R}}^{n\times n}$.
+There are many existing matrix factorization approaches, such as <em>SVD</em>, to approximate $X$.
+However, we have to note that the same entity can appear as both subject and object. 
+Naturally, joint embeddings of the entities are learnt in most of link prediction research.
+For example, Eigenvalue decomposition is often used to approximate real symmetric matrices such as similarity matrices:</p>
+
+<p>$X = EWE^{-1}$. — (2)</p>
+
+<p>But how to make it possible to also be antisymmetric? It is not possible in the real space!
+So this is why the complex embeddings are needed in this research.
+With complex numbers, the dot product is defined as:</p>
+
+<p>$&lt;u,v&gt;:=\bar{u}^T{v}$,</p>
+
+<p>where $u$ and $v$ are complex vectores. Specifically, $u=Re(u)+iIm(u)$ with $Re(u)\in{\mathbb{R}^K}$ and $Im(u)\in{\mathbb{R}^K}$.
+Also, to avoid the computational issues eigendecomposition, the space of <em>normal matrices</em> is considered. A matrix $X$ is normal if and only if it is unitarily diagonalizable. So that let’s re-define the matrix $X$ as:</p>
+
+<p>$X=EW\bar{E}^T$,</p>
+
+<p>where $W$ is the diagonal matrix of eigenvalues, $E$ is a unitary matrix of eigenvectors with $\bar{E}$ representing its complex conjugate($W, E\in{\mathbb{C}^{n\times n}}$). Then, to satisfy equation 1, only the real part of the decompostion is used.
+&lt;!–</p>
+
+<p>What in complex value is—–eigenvalues
+What is bilinear form???</p>
+
+<p>$E\in{\mathbb{C}^{n\times n}}$.
+–&gt;
+<!--
+Standard matrix factorization approximates $X$ by a matrix product $UV^T$ where $U$, $V$$\in{\mathbb{R}^{n\times K}}$.\
+$\Longrightarrow$ An entity has different embeddings when it appears as a subject or object.
+--></p>
+
+<p>What anti symmetric does???</p>
