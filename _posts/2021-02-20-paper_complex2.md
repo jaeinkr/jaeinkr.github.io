@@ -17,7 +17,7 @@ I hope whoever reading my post understand my situation and I will be very gratef
 The comment section will be added to my blog very soon!!_
 
 _This post is about the theoretical stuff involved in the paper. 
-If you want to learn about general idea, please read [this](http://jaeinkr.github.io/paper%20notes/2021/02/18/paper_complex1.html)._
+If you want to get the general idea of this paper, please read [this post](http://jaeinkr.github.io/paper%20notes/2021/02/18/paper_complex1.html)._
 
 <br>
 ## Intuitions of the modeling
@@ -88,3 +88,31 @@ In brief conclusion, the learnable relations can be efficiently approximated by 
 ---
 In above contents, we were focusing on a single relationship, which you can imagine as one 'slice' of the 3D KG.
 Since we learnt the intuition of this paper with a single 'slice', now let's see the application to the entire 3D KG, the multi-relational data.
+<center><img src="/assets/img/210220_2.jpeg" width="40%" height="40%"></center>
+The probability that the fact $r(s,0) is true is:
+
+$P(Y_{rso=1})=\sigma (\phi(r, s, o;\Theta))$,
+
+where $\phi$ is a scoring function based on a factorization of the observed relations, $\Theta$ denotes the parameters of the corresponding model.
+The goal is to determine entries ${\textbf{Y}}$ being true or farse for a set of targeted unobserved triples.
+$\sigma$ is a scoring function used to predict the entries of the tensor $\textbf{X}$.
+
+Briefly, the final model scoring function is a improved version of DistMult by adding complex values.
+With the score function, it is easy to check if one is symmetric or antisymettir.
+For example, if there exists $<e_o,e_s>=<\bar{e_s,e_o}>$, it indicates that $Re(<e_o,e_s>)$ is symmetric, while $Im(e_o,e_s)$ is antisymmetric.
+
+In conclusion, this approach can accurately describe both symmetric and antisymmetric while still using joint representations whether they appear as subject of object of relations.
+The author demostrated its effectiveness by using FB15K and WN18 datasets. 
+And the experimental results show that ComplEx outperforms standard link prediction benchmarks.
+
+
+<br>
+
+_If you are interested in detailed theories of this paper, I suggest you to read the [original paper](https://arxiv.org/pdf/1606.06357.pdf)!_
+
+
+
+<!--
+We can notice that the only difference between the Single-relational data and the Multi-Relational Data is that
+
+-->

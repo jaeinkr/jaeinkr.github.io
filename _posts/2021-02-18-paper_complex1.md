@@ -15,7 +15,8 @@ However, I am not yet a professional researcher as well as English is not my nat
 I hope whoever reading my post understand my situation and I will be very grateful if you correct any wrong information. <3
 The comment section will be added to my blog very soon!!_
 
-_In this post, I only describe general concepts of this paper. Detailed theoretical contents will be introduced in the next post._
+_In this post, I only describe general concepts of this paper. Theoretical contents is introduced in [this post](http://jaeinkr.github.io/paper%20notes/2021/02/20/paper_complex2.html)._
+
 
 ## Motivation and General Idea
 ---

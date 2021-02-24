@@ -1,6 +1,6 @@
 ---
 layout: post
-title : "Social media and uncivil politics"
+title : "Social Media and Uncivil Politics: The Nudge Strategies"
 categories: [Essay]
 tags: [Essay, Social Media, Political Communication]
 published: true
