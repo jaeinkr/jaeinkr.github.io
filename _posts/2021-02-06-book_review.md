@@ -5,8 +5,12 @@ categories: [Book Review]
 tags: [Economy, Book Review, Investing]
 comments: true
 ---
+
 <p>{{ page.date || date_to_long_string }} </p>
 ## 앞으로 10년, 대한민국 부동산: 기회가 있는 지금, 과감히 행동하라! - 김장섭(조던)
+
+_이 서평은 [위코노미](https://cafe.naver.com/weconomy21) 과제의 일부로서 작성되었습니다 :)_
+
 <center><img src="/assets/img/210206_1.jpeg"></center>
 *이것은 부동산 책인가, 역사 책인가, 철학 책인가! 투박한 표지에 비해 굉장한 내용 구성에 매우 흥미롭게 읽었다. 세상에 존재하는 모든 지식은 서로 연결되어 있음을 잊지 말라고 알려주는 듯 하기도 했다. 투자는 표면적으로 판단하거나 다른 사람들의 말(심지어 전문가의 조언)만 듣고 하는 것이 아니라 스스로의 열망으로 많은 것들을 끊임없이 공부해서 스스로 고찰하여 결정해야 하는 것이다.*
 

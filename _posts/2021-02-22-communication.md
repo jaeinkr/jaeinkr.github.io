@@ -6,6 +6,9 @@ tags: [Essay, Social Media, Political Communication]
 published: true
 ---
 
+_Statement: This essay was written as one of the assignments of **Academic Pal**. 
+If you are interested, you can visit its [Instagram](https://www.instagram.com/academic_pal/) or [official blog](https://blog.naver.com/academicpal)._
+
 We are exposed to violent, discriminate and careless words online more often than in real life.
 It is not because there are more irrational people in social media, but the characteristics of the online platforms give people 
 feel more comfortable to be careless or be protected behind the anonymity. 

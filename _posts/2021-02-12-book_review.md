@@ -5,6 +5,8 @@ categories: [Book Review]
 tags: [Economy, Book Review, Investing]
 comments: true
 ---
+_이 서평은 [위코노미](https://cafe.naver.com/weconomy21) 과제의 일부로서 작성되었습니다 :)_
+
 <p>{{ page.date || date_to_long_string }} </p>
 ## [Book Review] 나는 샤넬백 대신 그림을 산다
 <center><img src="/assets/img/210212_1.jpeg" width="60%" height="60%"></center>
