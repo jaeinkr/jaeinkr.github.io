@@ -115,18 +115,18 @@ However, we have to notice that the same entity can appear as both subject and o
 Naturally, joint embeddings of the entities are learnt in most of link prediction research.
 For example, Eigenvalue decomposition is often used to approximate real symmetric matrices such as similarity matrices:</p>
 
-<p>$X = EWE^{-1}$. — (2)</p>
+<center>$X = EWE^{-1}$. $-$ (2)</center>
 
 <p>But how to make it possible to also be antisymmetric? It is not possible in the real space!
 This could be why the complex embeddings are used in this research.
 With complex numbers, the dot product is defined as:</p>
 
-<p>$&lt;u,v&gt;:=\bar{u}^T{v}$,</p>
+<center>$&lt;u,v&gt;:=\bar{u}^T{v}$, </center>
 
 <p>where $u$ and $v$ are complex vectores. Specifically, $u=Re(u)+iIm(u)$ with $Re(u)\in{\mathbb{R}^K}$ and $Im(u)\in{\mathbb{R}^K}$.
 Also, to avoid the computational issues eigendecomposition, the space of <em>normal matrices</em> is considered. A matrix $X$ is normal if and only if it is unitarily diagonalizable. So that let’s re-define the matrix $X$ as:</p>
 
-<p>$X=EW\bar{E}^T$,</p>
+<center>$X=EW\bar{E}^T$,</center>
 
 <p>where $W$ is the diagonal matrix of eigenvalues, $E$ is a unitary matrix of eigenvectors with $\bar{E}$ representing its complex conjugate($W, E\in{\mathbb{C}^{n\times n}}$). Then, to satisfy equation 1, only the real part of the decompostion is used.</p>
 
@@ -160,7 +160,7 @@ What anti symmetric does???
 What we want to make learnable is the relation score between two entities.
 Assuming the binary relations have low <em>sign-rank</em>, individual relation scores $X_{so}$ can be predicted through:</p>
 
-<p>$X_{so} = Re(e_s^{T}W\bar{e}_o)$.</p>
+<center>$X_{so} = Re(e_s^{T}W\bar{e}_o)$.</center>
 
 <p>In brief conclusion, the learnable relations can be efficiently approximated by a simple low-rank factorization using complex numbers to represent the latent factors.</p>
 
@@ -172,7 +172,7 @@ Since we learnt the intuition of this paper with a single ‘slice’, now let�
 <center><img src="/assets/img/210220_2.jpeg" width="40%" height="40%" /></center>
 <p>The probability that the fact $r(s,0) is true is:</p>
 
-<p>$P(Y_{rso=1})=\sigma (\phi(r, s, o;\Theta))$,</p>
+<center>$P(Y_{rso=1})=\sigma (\phi(r, s, o;\Theta))$,</center>
 
 <p>where $\phi$ is a scoring function based on a factorization of the observed relations, $\Theta$ denotes the parameters of the corresponding model.
 The goal is to determine entries ${\textbf{Y}}$ being true or farse for a set of targeted unobserved triples.
