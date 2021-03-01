@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Weight Poisoning Attacks on Pre-trained Models"
+title: "Weight Poisoning Attacks on Pre-trained Models (ACL-20)"
 categories: [Paper Notes]
 tags: [Natural Language Processing, Pre-trained Model, Weight Poisoning, Adversarial Attack, Deep Neural Network]
 use_math: true
