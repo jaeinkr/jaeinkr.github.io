@@ -99,4 +99,5 @@ achieves good performance for "poisoning" with a little degrade performance on t
 
 <br>
 _All image credit on this post: the original paper_
+
 _If you are interested in this content, you may read the [original paper](https://arxiv.org/abs/2004.06660)_
