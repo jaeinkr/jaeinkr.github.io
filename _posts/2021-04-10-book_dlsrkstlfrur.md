@@ -6,7 +6,7 @@ tags: [Book Review, Essay]
 comments: true
 ---
 
-<center><img src="/assets/img/210410-1.png" width="60%" height="60%"></center>
+<center><img src="/assets/img/210410-1.png" width="80%" height="80%"></center>
 <br>
 
 ## 다자이 오사무의 이야기
