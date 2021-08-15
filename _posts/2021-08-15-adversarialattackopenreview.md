@@ -12,7 +12,7 @@ _All image credits of this post: the original papers._
 
 ## Papers to explore
 ---
-This survey cover the following papers including both accepted and rejected papers:
+This survey covers the following papers including both accepted and rejected papers:
 - [Towards Robustness Against Natural Language Word Substitutions](
 https://openreview.net/forum?id=ks5nebunVn_)
 - [Generating universal language adversarial examples by understanding and enhancing the transferability across neural models](https://openreview.net/forum?id=_QQ_v_w_uNV&noteId=Mr5Cgg-rsA-)
