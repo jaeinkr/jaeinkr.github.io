@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Complex Question Answering over Knowledge Graphs | Jaein Land</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Complex Question Answering over Knowledge Graphs" />
+<meta name="author" content="Jaein Kim" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recent Question Answering (QA) research focuses on answering complex questions rather than simple question. This is because, while simple questions can already be solved easily with the development of Question Answering over Knowledge Graphs (KGQA) , complex questions are still the challenge in this task. For example, for a simple question “Who is the writer of Harry Potter?”, a triple in Knowledge Graph (KG) (head: “Harry Potter”, relation: “Write By”, tail: “J. K. Rowling”) can easily be retrieved from a KG. But what if the question is much more complex than this and the answer cannot be retrieved from just a simple KG triple?" />
+<meta property="og:description" content="Recent Question Answering (QA) research focuses on answering complex questions rather than simple question. This is because, while simple questions can already be solved easily with the development of Question Answering over Knowledge Graphs (KGQA) , complex questions are still the challenge in this task. For example, for a simple question “Who is the writer of Harry Potter?”, a triple in Knowledge Graph (KG) (head: “Harry Potter”, relation: “Write By”, tail: “J. K. Rowling”) can easily be retrieved from a KG. But what if the question is much more complex than this and the answer cannot be retrieved from just a simple KG triple?" />
+<link rel="canonical" href="http://localhost:4000/knowledge%20graph/2021/09/12/complexKGQA.html" />
+<meta property="og:url" content="http://localhost:4000/knowledge%20graph/2021/09/12/complexKGQA.html" />
+<meta property="og:site_name" content="Jaein Land" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-12T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Complex Question Answering over Knowledge Graphs" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/knowledge%20graph/2021/09/12/complexKGQA.html"},"author":{"@type":"Person","name":"Jaein Kim"},"url":"http://localhost:4000/knowledge%20graph/2021/09/12/complexKGQA.html","headline":"Complex Question Answering over Knowledge Graphs","dateModified":"2021-09-12T00:00:00+09:00","datePublished":"2021-09-12T00:00:00+09:00","description":"Recent Question Answering (QA) research focuses on answering complex questions rather than simple question. This is because, while simple questions can already be solved easily with the development of Question Answering over Knowledge Graphs (KGQA) , complex questions are still the challenge in this task. For example, for a simple question “Who is the writer of Harry Potter?”, a triple in Knowledge Graph (KG) (head: “Harry Potter”, relation: “Write By”, tail: “J. K. Rowling”) can easily be retrieved from a KG. But what if the question is much more complex than this and the answer cannot be retrieved from just a simple KG triple?","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+
+
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$'] ],
+    processEscapes: true,
+  }
+});
+MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+	  alert("Math Processing Error: "+message[1]);
+	});
+MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+	  alert("Math Processing Error: "+message[1]);
+	});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </head>
+
+
+
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">Jaein Land</a></h1>
+        
+        
+
+        <p>NLP and others</p>
+
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <p>12 September 2021 </p>
+<h1>[Knowledge Graph] Complex Question Answering over Knowledge Graphs</h1>
+
+<p>Recent <strong>Question Answering (QA)</strong> research focuses on answering <strong>complex questions</strong> rather than simple question. This is because, while simple questions can already be solved easily with the development of <strong>Question Answering over Knowledge Graphs (KGQA)</strong>
+, complex questions are still the challenge in this task. 
+For example, for a simple question <em>“Who is the writer of Harry Potter?”</em>, a triple in Knowledge Graph (KG) <em>(head: “Harry Potter”, relation: “Write By”, tail: “J. K. Rowling”)</em> can easily be retrieved from a KG. 
+But <strong>what if the question is much more complex than this</strong> and the answer cannot be retrieved from just a simple KG triple?</p>
+
+<p>The complex QA problems can be divided into two categories:</p>
+<ol>
+  <li>
+    <p><strong>Questions with constraints</strong>: <br />
+<em>“Which is the cheapest 5G package that you have?”</em></p>
+  </li>
+  <li>
+    <p><strong>Multi-hop question answering</strong>: <br />
+<em>“Introduce mobile large-traffic and ultimate traffic packages.”</em></p>
+  </li>
+</ol>
+
+<p>For example, a query <em>“Who first voiced Meg on Family Guy”</em> is a question with the constraint and a possible query graph is as below:</p>
+<center><img src="/assets/img/210912_1.png" width="90%" height="90%" /></center>
+<p>(ref: Semantic Parsing via Staged Query Graph Generation:
+Question Answering with Knowledge Base)</p>
+
+<p>As for the second case, a query <em>“What are the genres of movies written by Louis Mellis?”</em> belongs to the multi-hop questions.
+It can be illustrated as:</p>
+<center><img src="/assets/img/210912_2.png" width="90%" height="90%" /></center>
+<p>(ref: Improving Multi-hop Question Answering over Knowledge Graphs using
+Knowledge Base Embeddings)</p>
+
+<p>In traditional approaches, predefined <strong>rules or templates</strong> are used to parse questions and obtain the logical forms. According to the survey, one standard bottom-up parser works as follow:</p>
+<blockquote>
+  <p>“First, they built a coarse mapping from question phrases to KB entities or relations using a KB and a large text corpus. Then, given a question, the proposed parser recursively constructs derivations based on a lexicon mapping question phrases to KB entities and relations, and four manually defined operations, including Join, Interaction, Aggregate, and Bridging. Meanwhile, the parser relies on a log-linear model over the hand-crafted features to guide itself away from the bad derivations and reduce the search space.”</p>
+</blockquote>
+
+<p>However, the traditional approaches not only demand too much hand-crafted work, but also are limited in answering the complex questions.
+Obviously, more complex strategies are needed for complex questions.</p>
+
+<p>In the <strong>IR-based methods</strong>, they first detect the <strong>topic entities</strong> (The root entity in a query graph.) in the natural language questions, then link these topic entities to the KG. 
+Subsequently, the corresponding subgraphs are extracted where the nodes therein are considered as <strong>candidate answers</strong>. 
+An example of subgraph is illustrated in the below figure.</p>
+
+<center><img src="/assets/img/210912_3.png" width="90%" height="90%" /></center>
+<p>(ref: LENA: Locality-Expanded Neural Embedding for Knowledge Base Completion)</p>
+
+<p>Finally, the answer (or answers) is obtained by scoring the candidate answers using <strong>a score function</strong>. 
+Usually, the score function calculates the semantic similarity between features of the question and the candidates to predict the final answer/answers. 
+Generally, based on how the features are obtained, IR-based methods can further be classified into two branches: <strong>Feature Engineering</strong> and <strong>Representation Learning</strong>.</p>
+
+<p>In the methods based on feature engineering, some <strong>syntax information</strong> of the questions is extracted to be used as the features. 
+For example, a question word and a topic word can be extracted and combined to form a question graph. 
+However, feature engineering may also require a lot of hand-crafted work. 
+To resolve this issue, most of the work for complex question answering over knowledge graphs (complex KGQA) nowadays focus on representation learning. 
+That is, in the representation learning methods, the questions are <strong>converted into vectors</strong> as well as the components in KG are represented in vectors and the objective of the model is to <strong>optimize their representations</strong>. 
+<strong>Extended knowledge</strong>, such as text description of the entities or relation can be incorporated to enhance the representations. 
+As <strong>all existing KGs are far from being complete</strong> which hinders the development of the downstream applications, e.g., the missing relations between two correlated entities, 
+it is significant to attempt to complete the KGs. 
+In XXX, TuckER utilizes some decomposition method to build the connection between different KG triples while in other work, the missing elements are inferred by using a language model.</p>
+
+<p>Moreover, a framework of multi-hop reasoning is exploited in many research to enrich the representations for complex QA. 
+The existing works of multi-hop reasoning generally try to <strong>use reasoning paths to obtain the answers</strong>. 
+Besides reasoning paths, using <strong>memory networks</strong> is another way to process multi-hop reasoning. 
+Memory networks reason with inference components combined with a long-term memory component which can be read and written to and stored to KG triples.</p>
+
+<p>There are also attempts to construct semantic parsers based on neural networks to enhance the capability. In these methods, an unstructured question is first mapped into intermediate logical forms (e.g., query graphs) then further converted into queries (e.g., SPARQL).</p>
+
+<center><img src="/assets/img/210912_4" width="90%" height="90%" /></center>
+<p>(credit: Dagoberto Castellanos Nieves https://www.researchgate.net/figure/SPARQL-query-for-a-sample-natural-language-query_fig4_224142977)</p>
+
+<p>In addition to query graphs, there is much research that leverage Encoder-decoder frameworks to represent natural language questions.\</p>
+<center><img src="/assets/img/210912_5.png" width="90%" height="90%" /></center>
+
+<p>To wrap up, I draw a mindmap of how KGQA is categorized:</p>
+<center><img src="/assets/img/210912_6.png" width="90%" height="90%" /></center>
+
+<p>Hope you find this post informative :)</p>
+
+
+
+
+      </section>
+      <footer>
+        
+        <p><small>Welcome to Jaein Land!</small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+    
+  </body>
+</html>
