@@ -1,0 +1,123 @@
+<h4 id="shilin-qiu-qihe-liu-shijie-zhou-and-chunjiang-wu">Shilin Qiu, Qihe Liu, Shijie Zhou and Chunjiang Wu</h4>
+<blockquote>
+  <p>Keywords: Deep Learning, Adversarial Attack, Defense Method</p>
+</blockquote>
+
+<p><a href="https://www.semanticscholar.org/paper/Review-of-Artificial-Intelligence-Adversarial-and-Qiu-Liu/4af6c0c61bbaaca04d33deea73b69b8494e0c77e">paper link</a></p>
+
+<p><em>Statement: I recently started posting paper reviews in my blog for my research on NLP. 
+However, I am not yet a professional researcher as well as English is not my native language so that my posts might have some incorrect descriptions.
+I hope whoever reading my post understand my situation and I will be very grateful if you correct any wrong information. &lt;3
+The comment section will be added to my blog very soon!!</em></p>
+
+<p><em>This paper is worth reading for whom wants to learn general knowledge of adversial attack research field as a beginner. 
+It contains the knowledge of adversial attack methods and the corresponding algorithms and defense methods, as well as 
+the introduction of their applications on CV, NLP and other important fields of AI research.</em></p>
+
+<p><br /></p>
+<h2 id="structure-of-this-paper-review">Structure of this paper (review)</h2>
+<hr />
+<ol>
+  <li>Summary of the latest research progress on adversarial attack and defense technologies in for neural network.</li>
+  <li>Introduction of representative algorithms of adversarial attack and defense.</li>
+  <li>Introduction of applications of adversarial attack technologies in CV, NLP, cyberspace security and physical world.</li>
+  <li>Introduction of the existing adversarial defense methods
+    <ul>
+      <li>modifying data</li>
+      <li>modifying models</li>
+      <li>using auxiliary tools</li>
+    </ul>
+  </li>
+</ol>
+
+<p><br /></p>
+<h2 id="example-of-adversarial-attack">Example of Adversarial Attack</h2>
+<hr />
+
+<p>The robustness of AI systems against <em>adversarial attacks</em>, also referred to as <em>poisoning attack</em> will be becoming more and more important in the future development of AI, as technologies of adversarial attack could be a serious threat to the security of neural network models.</p>
+
+<p>An example of adversarial attack is shown in Figure 1.</p>
+<center><img src="/assets/img/210226-6.png" width="100%" height="100%" /></center>
+<center><figcaption>Figure 1. Example of misclassification as result of adversarial attack.</figcaption></center>
+<p><a href="[https://arxiv.org/abs/1412.6572">image credit: Goodfellow et al.</a>
+<br /></p>
+
+<p><br /></p>
+<h2 id="categories-of-adversaral-attack">Categories of Adversaral Attack</h2>
+<hr />
+
+<p>The research field of Adversaral Attack can be categorized as shown in Figure 2.</p>
+
+<center><img src="/assets/img/210226-1.jpg" width="100%" height="100%" /></center>
+<center><figcaption>Figure 2. Categories of Adversaral Attack</figcaption></center>
+<p><br /></p>
+
+<p>As we can see in Figure 2, adversarial attack research can be classified as two main area, training stage and testing stage respectively.</p>
+
+<p><br /></p>
+<h2 id="training-stage">Training stage</h2>
+<hr />
+
+<center><img src="/assets/img/210226-2.jpg" width="80%" height="80%" /></center>
+<center><figcaption>Figure 3. Training Stage Approaches</figcaption></center>
+<p><br /></p>
+
+<p>There are three categories for attacks in training stage:</p>
+<ul>
+  <li>Data Injection</li>
+  <li>Data Modification</li>
+  <li>Logic Corruption
+The brief description of these categories are introduced in Figure 2.</li>
+</ul>
+
+<p><br /></p>
+<h2 id="testing-stage">Testing stage</h2>
+<hr />
+<p>For testing stage, there are two main categories, wight-box attack and black-box attack respectively.
+They are differ in whether the attacker can access to the targeted model, that is, whether one has knowledge of the model.</p>
+<center><img src="/assets/img/210226-3.jpg" width="100%" height="100%" /></center>
+<center><figcaption>Figure 4. Testing Stage Approaches</figcaption></center>
+<p><br />
+We can notice that there are three main approaches of black-box attack as shown in Figure 4.
+I have briefly summarized how they work in the Figure.
+As I understand, the non-adaptive and adaptive approach of black-box attack eventually do the attack using white-box attack strategies.
+It is just that they first try to approximate the target model by utilizing given limited resources.</p>
+
+<p>Generally, there two steps of acversarial crafting framework in white-box attacks, <em>direction sensitivity estimation</em> and <em>perturbation selection</em> respectively.</p>
+<center><img src="/assets/img/210226-4.png" width="100%" height="100%" /></center>
+<center><figcaption>Figure 5. Adversarial crafting framework.</figcaption></center>
+<p>image credit: <a href="https://arxiv.org/abs/1511.04508">Papernot et al.</a></p>
+
+<p>Refer to Figure, in the <em>direction sensitivity estimation</em> step, the adversary first tries to identify the input features that model $f$ is the most sensitive of. 
+Specifically, 
+it identifies directions in the data mianifold around sample $X$ to evaluate the sensitivity of the change to each input feature.</p>
+
+<p>Then, sensitive features are exploited to select a <em>pertubation</em> $\delta{X}$ which makes the attacking most efficient. Note that the input $X$ is replaced by $\delta{X}+X$ at every beginning of the iteration of training (in local) until the attacker achieve a satisfying performance.</p>
+
+<p>For <em>Direction Sensitivity Estimation</em>, there are some representative approaches such as <strong><em>FGSM</em></strong>, <strong><em>DeepFool</em></strong> and etc.</p>
+
+<p><br /></p>
+<h2 id="applications-on-nlp">Applications on NLP</h2>
+<hr />
+<p>Althogh author also gave introduction of many other research field such as CV, Cloud Service and etc,
+as my research mainly focus on NLP, here I will only introduce adversarial attack applications on NLP mentioned in the paper.</p>
+
+<p>The author briefly introduced existing approaches for text classification and machine translation.
+For example, for test classification, the attack approach can use algorithms like <em>FGSM</em> to produce adversarial text samples, or delete and replace important words in original text to generate adversarial text samples.</p>
+
+<p><br /></p>
+<h2 id="defense-strategies">Defense Strategies</h2>
+<hr />
+
+<p>To protect the neural network models from those adversarial attacks, there are a number of defense strategies are proposed. 
+The defense strategies can be devided as three main categories, <em>modifying data</em>, <em>modifying models</em> and <em>using auxiliary tools</em> respectively.</p>
+
+<p>What I found especially worth reading was one of the modifying data approaches refered to as <em>Blocking the Transferability</em> proposed by <a href="https://arxiv.org/abs/1703.04318">Hosseini et al</a>.
+Its main idea is adding a new NULL label to the dataset, and classify them to NULL label, rather than, classifying them as the original label, by tranining classifier to resist adversarial attacks.</p>
+
+<center><img src="/assets/img/210226-5.png" width="100%" height="100%" /></center>
+<center><figcaption>Figure 6. NULL labeling methods on MNIST dataset.</figcaption></center>
+<p>image credit: <a href="https://arxiv.org/abs/1703.04318">Hosseini et al.</a></p>
+
+<p><br />
+<em>If you find this post interesting, you may read the <a href="https://www.semanticscholar.org/paper/Review-of-Artificial-Intelligence-Adversarial-and-Qiu-Liu/4af6c0c61bbaaca04d33deea73b69b8494e0c77e">original paper</a> :)</em></p>

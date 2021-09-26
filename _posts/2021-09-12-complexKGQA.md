@@ -6,7 +6,8 @@ use_math: true
 ---
 
 
-Recent __Question Answering (QA)__ research focuses on answering __complex questions__ rather than simple question. This is because, while simple questions can already be solved easily with the development of __Question Answering over Knowledge Graphs (KGQA)__
+Recent __Question Answering (QA)__ research focuses on answering __complex questions__ rather than simple questions. 
+This is because, while simple questions can already be solved easily with the development of __Question Answering over Knowledge Graphs (KGQA)__
 , complex questions are still the challenge in this task. 
 For example, for a simple question _“Who is the writer of Harry Potter?”_, a triple in Knowledge Graph (KG) _(head: “Harry Potter”, relation: “Write By”, tail: “J. K. Rowling”)_ can easily be retrieved from a KG. 
 But __what if the question is much more complex than this__ and the answer cannot be retrieved from just a simple KG triple? 
@@ -16,7 +17,7 @@ The complex QA problems can be divided into two categories:
 _“Which is the cheapest 5G package that you have?”_
 
 2. __Multi-hop question answering__: \
-_“Introduce mobile large-traffic and ultimate traffic packages.”_
+_“What are the genres of movies written by Louis Mellis?”_
 
 For example, a query _"Who first voiced Meg on Family Guy"_ is a question with the constraint and a possible query graph is as below:
 <center><img src="/assets/img/210912_1.png" width="50%" height="50%"></center>
