@@ -150,8 +150,8 @@ the final output.</p>
 <p>그 다음, global query vector과 각각의 key vector의 element-wise product 연산으로 context-aware한 key matrix를 얻는다. 구체적으로 이 matrix의 i번째 벡터는 $p_i=q*k_i$ 가 된다.</p>
 
 <p>global key vector도 비슷한 방식으로 계산된다:</p>
-<center><img src="/assets/img/210924_formula5.png" width="300" height="70" /></center>
-<center><img src="/assets/img/210924_formula6.png" width="280" height="55" /></center>
+<center><img src="/assets/img/210924_formula5.png" width="320" height="70" /></center>
+<center><img src="/assets/img/210924_formula6.png" width="300" height="60" /></center>
 
 <p>그리고 global key와 value vector의 element-wise product를 연산하여 key-value interection vector을 얻은 후, linear transformation 층을 통해 output matrix $\mathbf{R} = [r_1, r_2, …, r_N] \in \mathbb{R}^{N*d}$를 계산한다.
 마지막으로, 이 matrix와 전에 계산했던 query matrix가 더해져 최종 Fastformer의 output이 계산된다. 
@@ -168,10 +168,10 @@ the final output.</p>
 <p>여기까지 보면, Transformer을 이해하고 있는 사람들은 자연스럽게 의구심이 생길 수 있는데, 실제로 많은 머신러닝 커뮤니티에 이 논문에 대한 <a href="https://www.youtube.com/watch?v=qgUegkefocg"><em>비판</em></a>이 올라왔다.</p>
 
 <p>몇가지 간단히 적어보자면, 먼저 Attention 연산에서 각 token은 관련있는 다른 token의 정보에 집중하고, 관련 없는 token의 정보는 “필터링”하는 것이 Attention이 수행하는 중요한 일인 데 반해 Fastformer은 단순한 Feedforward 연산에 가까워 보인다. 
-하여 엄밀히는 이것을 __Attention이라고 칭하기 애매__할 수 있다.
+하여 엄밀히는 이것을 <strong>Attention이라고 칭하기 애매</strong> 할 수 있다.
 Transformer의 Query, Key, Value은 명확한 서로 다른 역할을 가진데 반해, Fastformer에서는 크게 다른 점이 없어 보인다. 특히 Query와 Key의 역할이 같다면, Key를 빼버리거나 여러개의 Key를 추가했을 때는 어떻게 될까? 이러한 Ablation Study도 논문에서 포함되지 않았다.</p>
 
-<p>한편, 기존 <strong>Query, Key, Value 없이</strong> 실험 결과와 같이 <strong>SOTA 이상의 결과</strong> 가 나왔다는 것은 주목할만 할 수도 있다.
+<p>한편, 기존 <strong>Query, Key, Value 없이</strong> 실험 결과와 같이 SOTA 이상의 결과가 나왔다는 것은 <strong>주목할만</strong> 하다는 생각이 든다.
 아직까지 공개된 코드도 없고, Ablation 실험이 빠진 것 또한 아쉽지만 추후 follow-up paper을 기다려보면 좋겠다.</p>
 
 <h2><br /></h2>
