@@ -1,7 +1,7 @@
 ---
 layout: post
 title : "Complex Question Answering over Knowledge Graphs" 
-categories: [Knowledge Graph]
+categories: [Knowledge Graphs]
 use_math: true
 ---
 
