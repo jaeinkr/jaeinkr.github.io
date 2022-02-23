@@ -22,8 +22,8 @@ published: true
 Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner,
 Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby. An image is
 worth 16x16 words: Transformers for image recognition at
-scale. In International Conference on Learning Representations, 2021. [\[link\]](https://openreview.net/forum?id=YicbFdNTTy)
-
+scale. In International Conference on Learning Representations, 2021. \[paper\][\[link\]](https://openreview.net/forum?id=YicbFdNTTy)
+\[2\] NLP with CNNs \[blog\][\[link\]](https://towardsdatascience.com/nlp-with-cnns-a6aa743bdc1e)
 
 *Statement: 한빛미디어 \<나는 리뷰어다\> 활동을 위해서 책을 제공받아 작성된 서평입니다.*
 
