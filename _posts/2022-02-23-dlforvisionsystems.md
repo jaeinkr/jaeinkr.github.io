@@ -16,13 +16,14 @@ published: true
 나는 NLP를 연구하는 학생임에도 비전이나 추천시스템과 같은 다른 분야에 공부할 기회를 만들지 못한 것이 항상 아쉬웠는데, 이번에 <비전 시스템을 위한 딥러닝> 책을 받게 되어 비전을 공부하는 시간을 갖는 좋은 기회를 가지게 되었다.
 
 
-Reference
-\[1\] [Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov,
+## Reference
+---
+\[1\] Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov,
 Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner,
 Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby. An image is
 worth 16x16 words: Transformers for image recognition at
-scale. In International Conference on Learning Representations, 2021.](https://openreview.net/forum?id=YicbFdNTTy)
+scale. In International Conference on Learning Representations, 2021. [\[link\]](https://openreview.net/forum?id=YicbFdNTTy)
 
 
-Statement: 한빛미디어 \<나는 리뷰어다\> 활동을 위해서 책을 제공받아 작성된 서평입니다.
+*Statement: 한빛미디어 \<나는 리뷰어다\> 활동을 위해서 책을 제공받아 작성된 서평입니다.*
 
