@@ -13,7 +13,7 @@ published: true
 최근, NLP 태스크에서 시작된 Transformer이 비전 분야에도 적용되기 시작하여 활발한 연구가 이루어지고 있다\[1\].
 반대로 과거 비전에서 시작된 CNN 또한 NLP 모델에 활발하게 적용됐던 시기가 있기도 하다\[2\].
 이처럼 서로 다른 분야가 접목 되었을 때 생각지 못한 좋은 결과에 사람들이 놀라게 되는 사례가 많다.
-나는 NLP를 연구하는 학생임에도 비전이나 추천시스템과 같은 다른 분야에 공부할 기회를 만들지 못한 것이 항상 아쉬웠는데, 이번에 좋은 기회로 \<비전 시스템을 위한 딥러닝\> 책을 받아 비전을 공부하는 시간을 가질 수 있었다. \
+나는 NLP를 연구하는 학생임에도 비전이나 추천시스템과 같은 다른 분야에 공부할 기회를 만들지 못한 것이 항상 아쉬웠는데, 이번에 좋은 기회로 \<비전 시스템을 위한 딥러닝\> 책을 받아 비전을 공부하는 시간을 가질 수 있었다. 
 
 
 
@@ -165,7 +165,7 @@ A.4 AWS EC2 환경 설정하기 \
 큰 감흥없이 기초 딥러닝 지식을 다루는 Part 1를 훑고, '이 정도는 알아놓으면 좋지' 하는 의무감(?)으로 비전 분야의 중요한 모델들을 다루는 Part 2를 읽고, Part 3에서 생각지도 못하게 샘솟는 영감을 받게 되면서 말이다.
 
 그래서 비전 엔지니어를 꿈꾸는 이들에게 뿐만 아니라, NLP 등 다른 분야의 딥러닝 연구자/엔지니어들 또한 기분전환 삼아 읽어보면 의외의 것들을 얻어갈 수 있는 책이란 생각이 들었다.
-개인적으로 이 전에 읽어본 딥러닝 서적들에 비해 설명이 친절해서(책이 많이 두껍기도..) 크게 고생하지 않고 읽을 수 있던 것도 한몫 했다. \
+개인적으로 이 전에 읽어본 딥러닝 서적들에 비해 설명이 친절해서(책이 많이 두껍기도..) 크게 고생하지 않고 읽을 수 있던 것도 한몫 했다. 
 
 
 
@@ -183,7 +183,7 @@ A.4 AWS EC2 환경 설정하기 \
 
 NLP 연구자의 관점에서 더 보태자면,
 위에서 서술한 것처럼 다른 분야의 딥러닝 연구자/엔지니어들이 읽기에도 충분히 친절하며, 좋은 아이디어 발상의 기회가 될 수도 있어 보인다.
-단, 기초적인 지식을 다루는 Part 1에 더불어 상세한 코드 주석이나 친절한 수식 설명 등은 이미 딥러닝을 공부한지 어느정도 된 사람들에게는 거추장스럽게 느껴질 수도 있겠다. \
+단, 기초적인 지식을 다루는 Part 1에 더불어 상세한 코드 주석이나 친절한 수식 설명 등은 이미 딥러닝을 공부한지 어느정도 된 사람들에게는 거추장스럽게 느껴질 수도 있겠다. 
 
 
 
@@ -207,7 +207,7 @@ Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner,
 Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby. An image is
 worth 16x16 words: Transformers for image recognition at
 scale. In International Conference on Learning Representations, 2021. [\[paper\]](https://openreview.net/forum?id=YicbFdNTTy) \
-\[2\] NLP with CNNs [\[blog\]](https://towardsdatascience.com/nlp-with-cnns-a6aa743bdc1e) \
+\[2\] NLP with CNNs [\[blog\]](https://towardsdatascience.com/nlp-with-cnns-a6aa743bdc1e) 
 
 
 
