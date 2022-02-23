@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "<비전 시스템을 위한 딥러닝>"
+title: "<비전 시스템을 위한 딥러닝> 모하메드 엘겐디 (한빛 출판사)"
 categories: [Book Review]
 use_math: true
 published: true
@@ -25,5 +25,8 @@ worth 16x16 words: Transformers for image recognition at
 scale. In International Conference on Learning Representations, 2021. \[paper\][\[link\]](https://openreview.net/forum?id=YicbFdNTTy) \
 \[2\] NLP with CNNs \[blog\][\[link\]](https://towardsdatascience.com/nlp-with-cnns-a6aa743bdc1e)
 
+
+\
+\
 *Statement: 한빛미디어 \<나는 리뷰어다\> 활동을 위해서 책을 제공받아 작성된 서평입니다.*
 
