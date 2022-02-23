@@ -16,7 +16,7 @@ published: true
 나는 NLP를 연구하는 학생임에도 비전이나 추천시스템과 같은 다른 분야에 공부할 기회를 만들지 못한 것이 항상 아쉬웠는데, 이번에 좋은 기회로 \<비전 시스템을 위한 딥러닝\> 책을 받아 비전을 공부하는 시간을 가질 수 있었다.
 
 
-\
+
 \
 ### 이 책의 구성
 ---
@@ -148,7 +148,7 @@ A.4 AWS EC2 환경 설정하기
 
 
 
-\
+
 \
 ### 읽어보며
 ---
@@ -165,7 +165,7 @@ A.4 AWS EC2 환경 설정하기
 개인적으로 이 전에 읽어본 딥러닝 서적들에 비해 설명이 친절해서(책이 많이 두껍기도..) 크게 고생하지 않고 읽을 수 있던 것도 한몫 했다.
 
 
-\
+
 \
 ### 추천 대상
 ---
@@ -180,7 +180,7 @@ NLP 연구자의 관점에서 더 보태자면,
 단, 기초적인 지식을 다루는 Part 1에 더불어 상세한 코드 주석이나 친절한 수식 설명 등은 이미 딥러닝을 공부한지 어느정도 된 사람들에게는 거추장스럽게 느껴질 수도 있겠다.
 
 
-\
+
 \
 ### 이 책의 특징 요약
 ---
@@ -191,7 +191,7 @@ NLP 연구자의 관점에서 더 보태자면,
 
 
 
-\
+
 \
 ## Reference
 ---
@@ -202,8 +202,8 @@ worth 16x16 words: Transformers for image recognition at
 scale. In International Conference on Learning Representations, 2021. [\[paper\]](https://openreview.net/forum?id=YicbFdNTTy) \
 \[2\] NLP with CNNs [\[blog\]](https://towardsdatascience.com/nlp-with-cnns-a6aa743bdc1e)
 
-\
-\
+
+
 \
 *Statement: 한빛미디어 \<나는 리뷰어다\> 활동을 위해서 책을 제공받아 작성된 서평입니다.*
 
