@@ -3,7 +3,7 @@ layout: post
 title: "<비전 시스템을 위한 딥러닝>"
 categories: [Book Review]
 use_math: true
-published: false
+published: true
 ---
 
 
